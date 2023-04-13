@@ -14,4 +14,4 @@ Our code will be open sourced soon
 10. Test YOLOv7-CBAM seven classes Helmet detector
 11. Test YOLOv7-SimAM seven classes Helmet detector
 # Environment
-Please refer to [YOLOv7](https://github.com/WongKinYiu/yolov7) Installation
+Please refer to [YOLOv7](https://github.com/WongKinYiu/yolov7) and [PRBNet_PyTorch](https://github.com/pingyang1117/PRBNet_PyTorch) Installation
