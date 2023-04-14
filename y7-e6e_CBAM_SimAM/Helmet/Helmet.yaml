@@ -1,1 +1,15 @@
+# COCO 2017 dataset http://cocodataset.org
 
+# download command/URL (optional)
+#download: bash ./scripts/get_coco.sh
+
+# train and val data as 1) directory: path/images/, 2) file: path/images.txt, or 3) list: [path1/images/, path2/images/]
+train: /data/aicity2023/track5/train  # 118287 images
+val: /data/aicity2023/track5/val  # 5000 images
+test: /data/aicity2023/track5/test  # 20288 of 40670 images, submit to https://competitions.codalab.org/competitions/20794
+
+# number of classes
+nc: 7
+
+# class names
+names: [ 'motorbike', 'DHelmet', 'DNoHelmet', 'P1Helmet', 'P1NoHelmet', 'P2Helmet', 'P2NoHelmet' ]
