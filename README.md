@@ -17,6 +17,9 @@ The solutions ranked fourth, fifth, and sixth in Track 5 (Detecting Violations o
 8. Download the testing_videos from [track5 of AI CIty Challenge](http://www.aicitychallenge.org/2023-track5-download/)
 9. Extract images from Track 5 testing_videos by using: bash ./run_extract_test_frames.sh
 10. Test YOLOv7-E6E seven classes Helmet detector
+- Download the [YOLOv7-E6E seven classes Helmet detector model](https://drive.google.com/file/d/1rdo1H11KvoSBVlawouDmZiYYLEQZjeAh/view?usp=share_link) and reanme it to best.pt
+- python detect_Helmet.py --source ../test --weights best.pt --conf 0.93 --iou-thres 0.45 --img-size 1920 --device 1
+result_file_name y7e6eHelmet1920_9345.txt
 11. Test YOLOv7-CBAM seven classes Helmet detector
 12. Test YOLOv7-SimAM seven classes Helmet detector
 # Environment
