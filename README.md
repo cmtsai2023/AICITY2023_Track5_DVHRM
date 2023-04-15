@@ -17,10 +17,13 @@ The solutions ranked fourth, fifth, and sixth in Track 5 (Detecting Violations o
 8. Download the testing_videos from [track5 of AI CIty Challenge](http://www.aicitychallenge.org/2023-track5-download/)
 9. Extract images from Track 5 testing_videos by using: bash ./run_extract_test_frames.sh
 10. Test YOLOv7-E6E seven classes Helmet detector
-- Download the [YOLOv7-E6E seven classes Helmet detector model](https://drive.google.com/file/d/1rdo1H11KvoSBVlawouDmZiYYLEQZjeAh/view?usp=share_link) and reanme it to best.pt
-- python detect_Helmet.py --source ../test --weights best.pt --conf 0.93 --iou-thres 0.45 --img-size 1920 --device 1
-result_file_name y7e6eHelmet1920_9345.txt
+- Download [YOLOv7-E6E seven classes Helmet detector model](https://drive.google.com/file/d/1rdo1H11KvoSBVlawouDmZiYYLEQZjeAh/view?usp=share_link) and reanme it to best.pt
+- python detect_Helmet.py --source ../test --weights best.pt --conf 0.93 --iou-thres 0.45 --img-size 1920 --device 1 result_file_name y7e6eHelmet1920_93_45.txt
 11. Test YOLOv7-CBAM seven classes Helmet detector
+- Download [YOLOv7-CBAM seven classes Helmet detector model](https://drive.google.com/file/d/1KGx9E-hEDjgImkxih-W-YJHIQezyuRD7/view?usp=share_link) and rename it to best.pt
+- python detect_Helmet.py --source ../test --weights best.pt --conf 0.93185 --iou-thres 0.35 --img-size 1280 --device 0 result_file_name y7e6eCBAMHelmet1280_93185_35.txt
 12. Test YOLOv7-SimAM seven classes Helmet detector
+- Download [YOLOv7-SimAM seven classes Helmet detector model](https://drive.google.com/file/d/1gmnUySGZsz438I-y1KBYS8KQsw33jLuL/view?usp=share_link) and rename it to best.pt
+- pthon detect_Helmet.py --source ../test_images --weights best.pt --conf 0.92 --iou-thres 0.35 --img-size 1280 --device 3 result_file_name y7e6esiamHelmet1280_92_35.txt
 # Environment
 Please refer to [YOLOv7](https://github.com/WongKinYiu/yolov7) Installation
