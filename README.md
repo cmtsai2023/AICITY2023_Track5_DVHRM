@@ -9,9 +9,9 @@ The solutions ranked fourth, fifth, and sixth in Track 5 (Detecting Violations o
 - python GTxywh2yolo.py
 4. Uses [YOLOv7-E6E](https://github.com/WongKinYiu/yolov7) to train the seven classes Helmet detector: 
 - python -m torch.distributed.launch --nproc_per_node 4 --master_port 9527 train_aux.py --workers 8 --device 0,1,2,3 --sync-bn --batch-size 8 --data Helmet/Helmet.yaml --img 1920 1920 --cfg cfg/training/yolov7-e6e-Helmet.yaml --weights '' --name yolov7-e6e-Helmet --hyp data/hyp.scratch.p6.yaml --epochs 350
-5. Uses YOLOv7-[CBAM](https://openaccess.thecvf.com/content_ECCV_2018/papers/Sanghyun_Woo_Convolutional_Block_Attention_ECCV_2018_paper.pdf) to train and the seven classes Helmet detector: 
+5. Uses YOLOv7-[CBAM](https://openaccess.thecvf.com/content_ECCV_2018/papers/Sanghyun_Woo_Convolutional_Block_Attention_ECCV_2018_paper.pdf) to train the seven classes Helmet detector with 100 training videos and 100 validation videos: 
 - python -m torch.distributed.launch --nproc_per_node 4 --master_port 9527 train_aux.py --workers 8 --device 0,1,2,3 --sync-bn --batch-size 12 --data Helmet/Helmet.yaml --img 1280 1280 --cfg cfg/training/yolov7-e6e-CBAM-Helmet.yaml --weights '' --name yolov7-e6e-CBAM-Helmet1280-10050 --hyp data/hyp.scratch.p6.yaml --epochs 300
-6. Uses YOLOv7-[SimAM](https://proceedings.mlr.press/v139/yang21o.html) to train the seven classes Helmet detector with 75 training videos and 25 validation vi deos: 
+6. Uses YOLOv7-[SimAM](https://proceedings.mlr.press/v139/yang21o.html) to train the seven classes Helmet detector with 75 training videos and 25 validation videos: 
 - python -m torch.distributed.launch --nproc_per_node 4 --master_port 9527 train_aux.py --workers 8 --device 0,1,2,3 --sync-bn --batch-size 12 --data Helmet/Helmet.yaml --img 1280 1280 --cfg cfg/training/yolov7-e6e-siam-Helmet.yaml --weights best.pt --name yolov7-e6e-siam-Helmet1280-7525 --hyp data/hyp.scratch.p6.yaml --epochs 300
 - Break at epoch 174 
 7. Uses YOLOv7-[SimAM](https://proceedings.mlr.press/v139/yang21o.html) to fine-tune the seven classes Helmet detector with 100 training videos and 50 validation videos:
