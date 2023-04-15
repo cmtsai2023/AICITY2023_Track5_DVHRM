@@ -3,7 +3,7 @@ The solutions ranked fourth, fifth, and sixth in Track 5 (Detecting Violations o
 
 # Solution pipeline
 1. Download the training_videos from [track5 of AI CIty Challenge](http://www.aicitychallenge.org/2023-track5-download/)
-2. Extract ims from Track 5 training_videos by using: 
+2. Extract images from Track 5 training_videos by using: 
 - bash ./run_extract_train_frames.sh
 3. Convert gt.txt to yolo txt by using: 
 - python GTxywh2yolo.py
