@@ -1,7 +1,7 @@
 # AICITY2023_Track5_DVHRM
 The solutions ranked fourth, fifth, and sixth in Track 5 (Detecting Violations of Helmet Rules for Motorcyclists) of the NVIDIA AI City Challenge at the CVPR 2023 Workshop.
 
-# Solution pipeline
+# Solution pipelines
 1. Download the training_videos from [track5 of AI CIty Challenge](http://www.aicitychallenge.org/2023-track5-download/)
 2. Extracts images from Track 5 training_videos: 
 - bash ./run_extract_train_frames.sh
