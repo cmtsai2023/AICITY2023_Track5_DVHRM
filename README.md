@@ -3,9 +3,9 @@ The solutions ranked fourth, fifth, and sixth in Track 5 (Detecting Violations o
 
 # Solution pipeline
 1. Download the training_videos from [track5 of AI CIty Challenge](http://www.aicitychallenge.org/2023-track5-download/)
-2. Extracts images from Track 5 training_videos by using: 
+2. Extracts images from Track 5 training_videos: 
 - bash ./run_extract_train_frames.sh
-3. Convert gt.txt to yolo txt by using: 
+3. Convert gt.txt to yolo txt: 
 - python GTxywh2yolo.py
 4. Uses [YOLOv7-E6E](https://github.com/WongKinYiu/yolov7) to train the seven classes Helmet detector: 
 - python -m torch.distributed.launch --nproc_per_node 4 --master_port 9527 train_aux.py --workers 8 --device 0,1,2,3 --sync-bn --batch-size 8 --data Helmet/Helmet.yaml --img 1920 1920 --cfg cfg/training/yolov7-e6e-Helmet.yaml --weights '' --name yolov7-e6e-Helmet --hyp data/hyp.scratch.p6.yaml --epochs 350
@@ -17,7 +17,7 @@ The solutions ranked fourth, fifth, and sixth in Track 5 (Detecting Violations o
 7. Uses YOLOv7-[SimAM](https://proceedings.mlr.press/v139/yang21o.html) to fine-tune the seven classes Helmet detector with 100 training videos and 50 validation videos:
 - &nbsp;python -m torch.distributed.launch --nproc_per_node 4 --master_port 9527 train_aux.py --workers 8 --device 0,1,2,3 --sync-bn --batch-size 12 --data Helmet/Helmet.yaml --img 1280 1280 --cfg cfg/training/yolov7-e6e-siam-Helmet.yaml --weights best.pt --name yolov7-e6e-siam-Helmet1280-10050 --hyp data/hyp.scratch.p6.yaml --epochs 300
 8. Download the testing_videos from [track5 of AI CIty Challenge](http://www.aicitychallenge.org/2023-track5-download/)
-9. Extracts images from Track 5 testing_videos by using: 
+9. Extracts images from Track 5 testing_videos: 
 - bash ./run_extract_test_frames.sh
 10. Rank 6: Test YOLOv7-E6E seven classes Helmet detector
 - Download [YOLOv7-E6E seven classes Helmet detector model](https://drive.google.com/file/d/1rdo1H11KvoSBVlawouDmZiYYLEQZjeAh/view?usp=share_link) and reanme it to best.pt
